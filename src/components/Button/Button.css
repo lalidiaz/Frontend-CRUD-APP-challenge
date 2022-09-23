@@ -1,0 +1,23 @@
+.btn {
+  border: none;
+  padding: 10px;
+  font-size: 0.9em;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+  color: var(--gray);
+  border: 1px solid var(--light-blue);
+  cursor: pointer;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-violet {
+  background-color: var(--blue);
+  color: var(--white);
+  min-width: 150px;
+}
+
+.btn span {
+  padding-left: 5px;
+}

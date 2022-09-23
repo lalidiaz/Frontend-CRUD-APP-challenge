@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --sora: "Sora", sans-serif;
+  --chivo: "Chivo", sans-serif;
+  --work-sans: "Work Sans", sans-serif;
+
+  --white: #ffffff;
+  --dirty-white: #f5f5f5;
+  --light-green: #edfcf5;
+  --light-gray: #a0a6ac;
+  --light-blue: #ecf3fe;
+  --light-purple: #a6a8cd;
+  --green: #87c9ac;
+  --gray: #31343e;
+  --purple: #8186af;
+  --indigo: #4a50e0;
+  --blue: #444ce7;
+
+  --border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: var(--sora);
+  background-color: var(--white);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.layout-wrapper {
+  display: flex;
+}

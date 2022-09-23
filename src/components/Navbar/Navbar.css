@@ -1,0 +1,36 @@
+.navbar {
+  border-right: 1px solid var(--light-blue);
+  width: 20%;
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: var(--gray);
+  background-color: transparent;
+}
+
+.navbar-item span,
+.navbar-item--active span {
+  padding-left: 10px;
+  transition: top 0.5s;
+}
+
+.navbar-item--active {
+  color: var(--indigo);
+  background-color: var(--light-blue);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}

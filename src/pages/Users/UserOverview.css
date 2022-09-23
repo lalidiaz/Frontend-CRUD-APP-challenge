@@ -1,0 +1,55 @@
+.user-overview-wrapper {
+  padding: 20px;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-direction: column;
+}
+.user-overview-header-btn-container {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+.user-overview-tabs {
+  padding: 20px;
+  width: 100%;
+  border-bottom: 1px solid var(--light-blue);
+  display: flex;
+  color: var(--gray);
+}
+
+.user-overview-tabs a:nth-child(2) {
+  margin-left: 20px;
+}
+
+.user-overview-tab {
+  color: var(--gray);
+}
+
+.user-overview-tab--active {
+  color: var(--indigo);
+  font-weight: bold;
+  border-bottom: 2px solid var(--indigo);
+  transition: all 0.2s ease-in-out;
+}
+
+.user-overview-cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  header {
+    flex-direction: row;
+  }
+  .user-overview-cards {
+    flex-direction: row;
+  }
+}
