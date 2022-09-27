@@ -11,6 +11,7 @@
 .login-content {
   background-color: var(--white);
   padding: 20px;
+  width: 400px;
 }
 
 .login-form {

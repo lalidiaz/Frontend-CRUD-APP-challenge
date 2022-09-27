@@ -6,3 +6,9 @@
   align-items: center;
   flex-direction: column;
 }
+
+.go-back {
+  padding-top: 20px;
+  color: var(--blue);
+  font-weight: bold;
+}

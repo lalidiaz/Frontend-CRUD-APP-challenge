@@ -1,17 +1,33 @@
 import "./Login.css";
+import { useSelector, useDispatch } from "react-redux";
+import { adminLogin } from "../../store/authSlice";
+import { Loading, Form, Input } from "../../components";
 
 export const Login = () => {
+  const dispatch = useDispatch();
+  const { isLoading } = useSelector((state) => state.auth);
+
+  const handleLogIn = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    dispatch(adminLogin({ email }));
+  };
   return (
     <div className="login-wrapper">
       <div className="login-content">
-        <form className="login-form">
-          <label>
-            Email
-            <input type="email" />
-          </label>
-
-          <input type="submit" className="login-form-submit" />
-        </form>
+        {isLoading ? (
+          <>
+            <p>Logging in...</p>
+            <Loading />
+          </>
+        ) : (
+          <>
+            <p>Please log in</p>
+            <Form onSubmit={handleLogIn}>
+              <Input name="email" type="email" label="Email" />
+            </Form>
+          </>
+        )}
       </div>
     </div>
   );

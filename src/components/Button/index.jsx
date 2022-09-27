@@ -1,10 +1,15 @@
 import "./Button.css";
 
-export const Button = ({ text, type, color, onClick, icon }) => {
+export const Button = (props) => {
   return (
-    <button type={type} className={color === "violet" ? "btn btn-violet" : "btn"} onClick={onClick}>
-      {icon}
-      <span>{text}</span>
+    <button
+      type={props.type}
+      className={props.color === "violet" ? "btn btn-violet" : "btn"}
+      onClick={props.onClick}
+      {...props}
+    >
+      {props.icon && props.icon}
+      <span>{props.text}</span>
     </button>
   );
 };

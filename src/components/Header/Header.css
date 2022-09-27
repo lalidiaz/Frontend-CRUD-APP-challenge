@@ -1,0 +1,37 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex-direction: column;
+}
+.header-title {
+  font-size: 1.5em;
+}
+
+.header-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-btn-container button:nth-child(1) {
+  margin: 20px 0px;
+}
+
+@media (min-width: 992px) {
+  .header-title {
+    font-size: 2em;
+  }
+
+  header {
+    flex-direction: row;
+    padding: 20px 0px;
+  }
+  .header-btn-container {
+    width: 25%;
+    flex-direction: row;
+    align-items: center;
+  }
+}

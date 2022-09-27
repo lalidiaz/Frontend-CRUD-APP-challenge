@@ -1,0 +1,25 @@
+.error-wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.error-content {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border: 1px solid var(--error);
+  color: var(--error);
+  background-color: var(--error-light);
+  border-radius: var(--border-radius);
+}
+
+@media (min-width: 992px) {
+  .error-wrapper {
+    padding: 100px;
+  }
+
+  .error-content {
+    width: 300px;
+  }
+}

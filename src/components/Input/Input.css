@@ -1,0 +1,39 @@
+.input-label {
+  font-size: 1em;
+  color: var(--gray);
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  background-color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  min-height: 38px;
+  color: var(--gray);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  width: 100%;
+  margin-top: 10px;
+}
+
+input[name="image"] {
+  background-color: transparent;
+  border: none;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: var(--blue);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--white);
+  border: 1px solid var(--light-blue);
+  border-radius: var(--border-radius);
+}
+
+input::file-selector-button:hover {
+  background-color: var(--light-blue);
+  color: var(--gray);
+  transition: var(--transition);
+}

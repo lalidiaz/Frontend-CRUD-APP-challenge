@@ -1,20 +1,45 @@
-import { NoMatch, Login } from "./pages";
-import { UserOverview, UserList, UserDetail } from "./pages/Users";
 import { Routes, Route } from "react-router-dom";
+import { NoMatch, Login, Users } from "./pages";
+import { Layout, ProtectedRoutes, UserDetails, PublicRoutes } from "./components";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
-    <div className="layout-wrapper">
-      <Routes>
-        <Route exact path="user" element={<UserOverview />}>
-          <Route exact path="list" element={<UserList />} />
-          <Route exact path="detail" element={<UserDetail />} />
-        </Route>
-        <Route path="/login" element={<Login />} />
+    <>
+      <div className="app">
+        <Routes>
+          {/* Private Routes */}
+          <Route path="/" element={<ProtectedRoutes />}>
+            <Route
+              index
+              path="/users"
+              element={
+                <Layout>
+                  <Users />
+                </Layout>
+              }
+            />
+            <Route
+              index
+              path="/users/:id"
+              element={
+                <Layout>
+                  <UserDetails />
+                </Layout>
+              }
+            />
+            <Route path="*" element={<NoMatch />} />
+          </Route>
 
-        <Route path="*" element={<NoMatch />} />
-      </Routes>
-    </div>
+          {/* Public Routes */}
+          <Route path="/" element={<PublicRoutes />}>
+            <Route path="/login" element={<Login />} />
+          </Route>
+        </Routes>
+      </div>
+      <ToastContainer />
+    </>
   );
 };
 
