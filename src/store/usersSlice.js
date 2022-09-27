@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
 import { usersFakeAPI } from "../lib/fakeApi";
 import { faker } from "@faker-js/faker";
 import { delay } from "../utils/helpers";
@@ -76,15 +76,10 @@ export const usersSlice = createSlice({
       const findUser = state.data.find((user) => user.id === payload.data.user.id);
       const { first_name, last_name, email } = payload.data.user;
 
-      if (findUser && first_name) {
-        findUser.first_name = first_name;
-      }
-      if (findUser && last_name) {
-        findUser.lastName = last_name;
-      }
-
-      if (findUser && email) {
-        findUser.email = email;
+      if (findUser) {
+        if (first_name) findUser.first_name = first_name;
+        if (last_name) findUser.last_name = last_name;
+        if (email) findUser.email = email;
       }
     });
     builder.addCase(updateUser.rejected, (state, { payload }) => {

@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { menu } from "../../utils/menu";
 import logo from "../../assets/logo.png";
 import { motion } from "framer-motion";
@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const { adminUser } = useSelector((state) => state.auth);
 
@@ -22,7 +23,7 @@ export const Navbar = () => {
   const isMobile = size.width <= 640;
 
   const handleLogout = () => {
-    dispatch(adminLogout());
+    dispatch(adminLogout(navigate("/login")));
   };
 
   return (

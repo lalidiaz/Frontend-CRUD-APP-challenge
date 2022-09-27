@@ -74,7 +74,8 @@ export const adminLogin = createAsyncThunk("auth/login", async ({ email }) => {
   return { data: { status: "success", user: { id, email, first_name, last_name, avatar } } };
 });
 
-export const adminLogout = createAsyncThunk("auth/logout", async () => {
+export const adminLogout = createAsyncThunk("auth/logout", async ({ routeTo }) => {
   await delay(3000);
+  routeTo();
   return { status: "success" };
 });
