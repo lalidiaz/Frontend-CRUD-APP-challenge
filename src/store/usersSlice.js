@@ -167,11 +167,9 @@ export const updateUser = createAsyncThunk(
   "users/updateUser",
   async ({ id, first_name, last_name, email, routeTo }) => {
     await delay(3000);
-
     const user = { id, first_name, last_name, email };
-
+    toast.success("Success", { position: "top-center", autoClose: 5000 });
     routeTo("/users");
-
     return { data: { user, status: "success" } };
   }
 );
