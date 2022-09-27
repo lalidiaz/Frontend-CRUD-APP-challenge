@@ -1,5 +1,4 @@
 import "./Login.css";
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { adminLogin } from "../../store/authSlice";
 import { Loading, Form, Input } from "../../components";
@@ -7,17 +6,13 @@ import { Loading, Form, Input } from "../../components";
 export const Login = () => {
   const dispatch = useDispatch();
   const { isLoading } = useSelector((state) => state.auth);
-  const [errorEmpty, setErrorEmpty] = useState("");
 
   const handleLogIn = (e) => {
     e.preventDefault();
-    setErrorEmpty("");
     const email = e.target.email.value;
 
     if (email) {
       dispatch(adminLogin({ email }));
-    } else {
-      setErrorEmpty("Please enter email");
     }
   };
   return (
@@ -32,11 +27,10 @@ export const Login = () => {
           <>
             <p>Please log in</p>
             <Form onSubmit={handleLogIn}>
-              <Input name="email" type="email" label="Email" />
+              <Input name="email" type="email" label="Email" required />
             </Form>
           </>
         )}
-        {errorEmpty && <p className="error-empty-email">{errorEmpty}</p>}
       </div>
     </div>
   );

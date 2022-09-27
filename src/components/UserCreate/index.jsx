@@ -12,8 +12,10 @@ export const UserCreate = ({ hide }) => {
     const last_name = e.target.last_name.value;
     const email = e.target.email.value;
 
-    dispatch(createUser({ first_name, last_name, email }));
-    hide();
+    if (first_name && last_name && email) {
+      dispatch(createUser({ first_name, last_name, email }));
+      hide();
+    }
   };
   return (
     <Modal title="Create user" hide={hide}>
