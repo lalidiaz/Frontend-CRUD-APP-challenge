@@ -13,7 +13,14 @@
   padding: 20px;
   width: 400px;
 }
-
+.error-empty-email {
+  color: var(--error);
+  background-color: var(--error-light);
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
 .login-form {
   display: flex;
   flex-direction: column;

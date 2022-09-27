@@ -4,7 +4,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { BiShow } from "react-icons/bi";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUsers, fetchUserById, deleteUser } from "../../store/usersSlice";
-import { Loading, Error, Pagination, Card } from "../../components";
+import { Loading, Error, Pagination, Card, AnimateRoute } from "../../components";
 import { useNavigate } from "react-router-dom";
 
 export const Users = () => {
@@ -44,6 +44,7 @@ export const Users = () => {
   };
 
   return (
+    <AnimateRoute>
     <div className="user-list-wrapper">
       <section className="layout-cards">
         <Card total={total} title="Total users" percent="20%" />
@@ -101,5 +102,6 @@ export const Users = () => {
         </>
       )}
     </div>
+    </AnimateRoute>
   );
 };

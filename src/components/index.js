@@ -16,3 +16,4 @@ export { UserCreate } from "./UserCreate";
 export { Modal } from "./Modal";
 export { Pagination } from "./Pagination";
 export { PublicRoutes } from "./PublicRoutes";
+export {AnimateRoute} from './AnimateRoute';

@@ -5,6 +5,7 @@ import { Form, Input, UserDetailDisplay } from "..";
 import { updateUser } from "../../store/usersSlice";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { AnimateRoute } from "../";
 
 export const UserDetails = () => {
   const { data } = useSelector((state) => state.users);
@@ -27,7 +28,7 @@ export const UserDetails = () => {
   };
 
   return (
-    <>
+    <AnimateRoute>
       {user ? (
         <div className="user-detail-wrapper">
           <div className="user-detail-edit-container">
@@ -38,13 +39,6 @@ export const UserDetails = () => {
           {isEditing ? (
             <div className="form-edit-container">
               <Form onSubmit={handleUpdate}>
-                {/* <Input
-                  type="file"
-                  name="image"
-                  label="Select image"
-                  id="file-upload"
-                  htmlFor="file-upload"
-                /> */}
                 <Input type="text" name="first_name" label="First name" />
                 <Input type="text" name="last_name" label=" Last name" />
                 <Input type="text" name="email" label=" Email" />
@@ -60,6 +54,6 @@ export const UserDetails = () => {
           <Link to="/users">Go back</Link>
         </div>
       )}
-    </>
+    </AnimateRoute>
   );
 };

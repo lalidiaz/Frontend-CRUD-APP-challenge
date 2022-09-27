@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { usersFakeAPI } from "../lib/fakeApi";
 import { faker } from "@faker-js/faker";
 import { delay } from "../utils/helpers";

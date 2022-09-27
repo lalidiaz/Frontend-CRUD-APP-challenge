@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { delay, getEmailFromStorage } from "../utils/helpers";
+import { delay } from "../utils/helpers";
 import { faker } from "@faker-js/faker";
+import { toast } from "react-toastify";
 
 const initialState = {
   isLoading: false,
@@ -29,8 +30,6 @@ export const authSlice = createSlice({
       state.errorMessage = "";
       state.adminUser = payload.data.user;
       state.isLoggedIn = true;
-      // localStorage.setItem("avatar", payload.data.user.avatar);
-      // localStorage.setItem("email", payload.data.user.email);
     });
     builder.addCase(adminLogin.rejected, (state, { payload }) => {
       state.loaded = false;
