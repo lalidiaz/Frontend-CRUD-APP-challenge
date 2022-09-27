@@ -18,9 +18,9 @@ export const UserCreate = ({ hide }) => {
   return (
     <Modal title="Create user" hide={hide}>
       <Form onSubmit={handleCreate}>
-        <Input type="text" name="first_name" label="First name" />
-        <Input type="text" name="last_name" label=" Last name" />
-        <Input type="text" name="email" label=" Email" />
+        <Input type="text" name="first_name" required label="First name" />
+        <Input type="text" name="last_name" required label=" Last name" />
+        <Input type="text" name="email" required label=" Email" />
       </Form>
     </Modal>
   );
