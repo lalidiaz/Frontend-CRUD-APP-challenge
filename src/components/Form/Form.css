@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-submit {
+  width: 100px;
+  background-color: none;
+  color: var(--gray);
+  background-color: var(--blue);
+  border: none;
+  padding: 10px;
+  height: 30px;
+  margin: 20px;
+}

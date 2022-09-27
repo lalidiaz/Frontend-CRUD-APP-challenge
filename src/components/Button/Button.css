@@ -1,0 +1,42 @@
+.btn {
+  border: none;
+  padding: 10px;
+  font-size: 0.9em;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+  color: var(--gray);
+  border: 1px solid var(--light-blue);
+  cursor: pointer;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: 45px;
+}
+
+.btn:hover {
+  background-color: var(--gray);
+  color: var(--white);
+  transition: var(--transition);
+}
+.btn-violet {
+  background-color: var(--blue);
+  color: var(--white);
+  min-width: 150px;
+}
+
+.btn-violet:hover {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+  transition: var(--transition);
+}
+
+.btn span {
+  padding-left: 5px;
+}
+
+@media (min-width: 992px) {
+}

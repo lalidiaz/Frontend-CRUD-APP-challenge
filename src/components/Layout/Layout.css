@@ -1,0 +1,20 @@
+.layout-wrapper {
+  width: 100%;
+  padding: 20px;
+}
+
+.layout-cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .layout-wrapper {
+    width: 100%;
+  }
+  .layout-cards {
+    flex-direction: row;
+  }
+}
