@@ -1,4 +1,4 @@
-#### Creed & Bear FE Challenge ✨
+#### Frontend Coding Challenge ✨
 
 Install dependencies
 ```
