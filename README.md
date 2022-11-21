@@ -17,6 +17,9 @@ npm run build
 
 Deployed application [here](https://frontend-challenge-qtp5.vercel.app/) .
 
+#### Login credentials 
+Any email will login successfully. 
+
 #### Introduction
 Frontend coding challenge for a company.
 
